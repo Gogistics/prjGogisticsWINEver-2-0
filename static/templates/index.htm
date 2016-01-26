@@ -1,0 +1,19 @@
+{% extends "/base.html"%}
+
+<!-- sub-css block -->
+{% block css_content %}
+<link type="text/css" rel="stylesheet" href="/css/index.min.css">
+{% endblock %}
+
+<!-- main content -->
+{% block main_content %}
+<div ng-app="indexPageApp" ng-controller="indexPageCtrl as ctrl" ui-view></div>
+{% endblock %}
+
+<!-- sub-js block -->
+{% block js_content %}
+<script type="text/javascript" src="/js/index.min.js"></script>
+<!--[if (gt IE 9)|!(IE)]>
+<!-->
+<!--<![endif]-->
+{% endblock %}

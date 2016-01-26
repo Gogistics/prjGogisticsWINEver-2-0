@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta name="author" content="Alan Tai">
+<meta name="company_name_english" content="Gogistics Ltd.">
+<meta name="company_name_mandarin" content="資雲科技有限公司">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="description" content="wine,price_tracking,international_shipping,merchandise,bay_area,taiwan">
+<meta name="keywords" content="wine,price_tracking,international_shipping,merchandise,bay_area,taiwan">
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	
+<!-- speeds up cross domain loading using DNS prefetching -->
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//code.jquery.com">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<!-- /dns prefetching -->
+
+<!-- icon -->
+<link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/img/icons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<!-- favicon and touch icons for Apple devices (not done yet) -->
+<link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+<link rel="manifest" href="/static/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!-- /icon setting -->
+
+<!--[if (gt IE 9)|!(IE)]>
+<!-->
+<!-- Bootstrap Core CSS -->
+<link type="text/css" rel="stylesheet" href="/css/plugin_bootstrap/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<!-- leaflet -->
+<link type="text/css" rel="stylesheet" href="/leaflet/leaflet.css" />
+<!-- angularjs css -->
+<link type="text/css" rel="stylesheet" href="/css/plugin_ng/ng-animation.css">
+<link type="text/css" rel="stylesheet" href="/css/plugin_ng/animate.css">
+<!-- self-defined css -->
+<link type="text/css" rel="stylesheet" href="/css/base.min.css">
+<!--<![endif]-->
+
+{% block css_content %}{% endblock %}
+<title>{{ title|safe }}</title>
+</head>
+<body>
+    <!-- Preloader -->
+	<div id="preloader">
+	  <div id="loaderInner"></div>
+	</div>
+	<!-- main content -->
+	{% block main_content %}
+	<p>No Templates Found</p>
+	{% endblock %}
+
+	<!-- IE alert -->
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+		alert("Do not support for IE version lower than or equal to IE 9");
+	</script>
+	<![endif]-->
+
+	<!--[if (gt IE 9)|!(IE)]>
+    <!--> 
+	<!-- js files are placed at the end of the document so the pages load faster -->
+	<!-- google js -->
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	
+	<!-- jquery ; there is jquery 1.11.0 in local folder for IE 7,8 -->
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<!-- leaflet -->
+	<script type="text/javascript" src="/leaflet/leaflet.js"></script>
+	
+	<!-- angularjs -->
+	<script type="text/javascript" src="/js/plugin_ng/angular.min.js"></script>
+	<script type="text/javascript" src="/js/plugin_ng/angular-route.js"></script>
+	<script type="text/javascript" src="/js/plugin_ng/angular-ui-router.js"></script>
+	<script type="text/javascript" src="/js/plugin_ng/angular-animate.js"></script>
+	<script type="text/javascript" src="/js/plugin_mis/responsive-directive.js"></script>
+	
+	<!-- bootstrap -->
+	<script type="text/javascript" src="/js/plugin_bootstrap/bootstrap.min.js"></script>
+	
+	<!-- d3 -->
+	<script type="text/javascript" src="/js/plugin_d3/d3.js"></script>
+	<script type="text/javascript" src="/js/plugin_d3/d3_tips.js"></script>
+	<script type="text/javascript" src="/js/plugin_d3/box.js"></script>
+	<!--<![endif]-->
+	<!-- sub-js -->
+	{% block js_content %}{% endblock %}
+</body>
+</html>

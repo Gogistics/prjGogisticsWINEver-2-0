@@ -1,0 +1,71 @@
+application: gogistics-winever
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /favicon\.ico
+  static_files: static/images/icons/favicon.ico
+  upload: static/images/icons/favicon.ico
+  expiration: "1d 0m"
+
+- url: /apple-touch-icon\.png
+  static_files: static/images/winever_logo.png
+  upload: static/images/winever_logo.png
+  expiration: "6d 0m"
+
+- url: /apple-touch-icon-precomposed\.png
+  static_files: static/images/winever_logo.png
+  upload: static/images/winever_logo.png
+  expiration: "6d 0m"
+
+- url: /css
+  static_dir: static/css
+  expiration: "2d 0m"
+
+- url: /js
+  static_dir: static/javascripts
+  expiration: "2d 0m"
+
+- url: /img
+  static_dir: static/images
+  expiration: "6d 0m"
+
+- url: /my_ng_templates
+  static_dir: static/my_ng_templates
+  expiration: "2d 0m"
+
+- url: /leaflet
+  static_dir: static/leaflet-0.7
+  expiration: "6d 0m"
+
+- url: /tinymce
+  static_dir: static/tinymce/js/tinymce
+  expiration: "6d 0m"
+
+- url: /mis
+  static_dir: static/mis
+  expiration: "6d 0m"
+
+- url: /robots\.txt
+  static_files: static/mis/robots.txt
+  upload: static/mis/robots.txt
+
+- url: /(base/.*)?
+  script: routers.base.app
+
+- url: /query/.*
+  script: routers.query_mechanisms.app
+
+- url: /cron_tasks/.*
+  script: routers.cron_tasks.app
+  login: admin
+  
+libraries:
+- name: webapp2
+  version: latest
+
+- name: jinja2
+  version: latest
