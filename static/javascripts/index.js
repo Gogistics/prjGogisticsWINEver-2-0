@@ -74,6 +74,7 @@
         ctrl.select_topic = function(arg_selected_tag){
             // set selected page name
             ctrl.selected = arg_selected_tag;
+            ctrl.toggle_list();
         }
         ctrl.is_selected = function(arg_selected_tag){
             // check if selected tag name
