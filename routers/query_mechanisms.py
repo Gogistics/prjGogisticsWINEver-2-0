@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
 Created on Dec 24, 2014
-
 @author: Alan Tai
 '''
 from handlers.webapp2_auth import BaseHandler

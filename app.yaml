@@ -58,6 +58,9 @@ handlers:
 
 - url: /query/.*
   script: routers.query_mechanisms.app
+  
+- url: /wine_info/.*
+  script: routers.wine_info_handling_mechanisms.app
 
 - url: /cron_tasks/.*
   script: routers.cron_tasks.app

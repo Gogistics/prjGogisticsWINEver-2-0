@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 '''
 Created on Dec 22, 2014
-
 @author: Alan Tai
 '''
 from handlers.webapp2_auth import BaseHandler
 from models.models_wine_info import WebLinkRoot, WebLinkWineTemp, WebLinkWine,\
     WinePriceInfo
-from dictionaries.general import QueryInfo
+from dictionaries.general import QueryInfo, Setting
 from bs4 import BeautifulSoup
 import webapp2, logging, re, urllib2, urlparse
 from datetime import datetime
@@ -212,7 +211,8 @@ class TaskSearchPriceDispatcher(BaseHandler):
                     wine_price.put()
 
 # configuration
-config = dict_general.config_setting
+dict_setting = Setting()
+config = dict_setting.config_setting
 
 # app
 app = webapp2.WSGIApplication([

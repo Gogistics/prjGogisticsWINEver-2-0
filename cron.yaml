@@ -1,0 +1,20 @@
+cron:
+- description: crawler for root links
+  url: /cron_tasks/crawl_root_links
+  schedule: every day 00:00
+  timezone: Asia/Taipei
+
+- description: crawler for temp links
+  url: /cron_tasks/crawl_temp_links
+  schedule: every 8 hours from 01:00 to 21:00
+  timezone: Asia/Taipei
+
+- description: categorize porn info
+  url: /cron_tasks/categorize_porn_info
+  schedule: every 8 hours from 02:00 to 22:00
+  timezone: Asia/Taipei
+
+- description: categorize porn info
+  url: /cron_tasks/crawl_tag_info
+  schedule: every 12 hours
+  timezone: Asia/Taipei
