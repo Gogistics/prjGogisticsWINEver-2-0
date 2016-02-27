@@ -9,6 +9,9 @@ h4{
 .vivino_container{
     text-align: center;
 }
+#list_detail{
+    height: 100%;
+}
 @media(max-width: 767px) {
 	.list_icon:hover {
 		cursor: pointer;
