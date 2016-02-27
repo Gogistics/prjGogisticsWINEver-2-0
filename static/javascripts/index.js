@@ -38,6 +38,11 @@
 			url : '/search_wine',
 			parent : 'index_page',
 			templateUrl : '/my_ng_templates/my_ng_index_search_wine.html'
+		})
+        .state('my_favorites', {
+			url : '/my_favorites',
+			parent : 'index_page',
+			templateUrl : '/my_ng_templates/my_ng_index_favorites.html'
 		});
 
 		$urlRouterProvider.otherwise('/search_wine'); // for defualt state routing; for current routing mechanism, it's not necessary
@@ -49,8 +54,8 @@
 	    $state.transitionTo('search_wine'); // set init view
         var ctrl = this;
         ctrl.selected = $state.current.name;
-            
-        //
+        
+        // toggle views
         ctrl.is_list_open = false;
         ctrl.toggle_list = function(){
 			ctrl.is_list_open = !ctrl.is_list_open;
@@ -74,6 +79,7 @@
         ctrl.select_topic = function(arg_selected_tag){
             // set selected page name
             ctrl.selected = arg_selected_tag;
+            $state.transitionTo(ctrl.selected);
             ctrl.toggle_list();
         }
         ctrl.is_selected = function(arg_selected_tag){
@@ -90,6 +96,22 @@
         ctrl.has_query_result = false;
         ctrl.query_keywords = '';
         ctrl.snooth_query_result_list = [];
+        
+        // save
+        ctrl.save = function(arg_key, arg_info, event){
+            //
+        }
+        
+        ctrl.is_info_saved = function(arg_key, arg_info, event){
+            //
+            return 'Save';
+        }
+        
+        ctrl.open_url = function(arg_url){
+            //
+        }
+        
+        //
         ctrl.search_wine_info = function(){
             // popup loader gif
 			$("#preloader").css({ display : "block"});

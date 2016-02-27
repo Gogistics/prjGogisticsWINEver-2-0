@@ -12,9 +12,33 @@ h4{
 #list_detail{
     height: 100%;
 }
+.topic_selector_block{
+    background-color: #eee; height: 100%;
+}
+.img_topic_selector_block{
+    max-height: 100px; margin: 20px auto;
+}
+.save{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 5px 5px;
+    background: transparent;
+    color: #d9534f;
+    text-align: center;
+}
+.btn-circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 5px 5px;
+    background: transparent;
+    color: #eea236;
+    text-align: center;
+}
 @media(max-width: 767px) {
 	.list_icon:hover {
-		/*cursor: pointer;*/
+		cursor: pointer;
 	}
 	.list_block_show {
 		position: fixed;
@@ -155,7 +179,7 @@ h4{
 /* search wine */
 @media(min-width: 768px) {
     .list_icon:hover {
-		/*cursor: pointer;*/
+		cursor: pointer;
 	}
 	
 	.list_block_show {
