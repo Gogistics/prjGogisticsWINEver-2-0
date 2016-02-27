@@ -14,7 +14,7 @@ h4{
 }
 @media(max-width: 767px) {
 	.list_icon:hover {
-		cursor: pointer;
+		/*cursor: pointer;*/
 	}
 	.list_block_show {
 		position: fixed;
@@ -155,7 +155,7 @@ h4{
 /* search wine */
 @media(min-width: 768px) {
     .list_icon:hover {
-		cursor: pointer;
+		/*cursor: pointer;*/
 	}
 	
 	.list_block_show {
