@@ -90,7 +90,8 @@
 	indexPageController.$injector = ['$state', '$scope', 'GLOBAL_VALUES'];
 	window.index_page_app.controller('indexPageCtrl', indexPageController);
     
-    var wineInfoQueryController = function ($state, $scope, $http, GLOBAL_VALUES) {
+    //
+    var wineInfoQueryController = function ($state, $scope, $http, $window, GLOBAL_VALUES) {
 		$scope.email = GLOBAL_VALUES.EMAIL;
         var ctrl = this;
         ctrl.has_query_result = false;
@@ -108,7 +109,8 @@
         }
         
         ctrl.open_url = function(arg_url){
-            //
+            // open new tab
+            $window.open(arg_url, '_blank');
         }
         
         //
@@ -201,7 +203,7 @@
             return arg_str;
         }
 	}
-	wineInfoQueryController.$injector = ['$state', '$scope', '$http', 'GLOBAL_VALUES'];
+	wineInfoQueryController.$injector = ['$state', '$scope', '$http', '$window', 'GLOBAL_VALUES'];
 	window.index_page_app.controller('wineInfoQueryCtrl', wineInfoQueryController);
 })();
 

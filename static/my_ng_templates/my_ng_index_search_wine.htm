@@ -37,7 +37,6 @@
                                     <img src="https:[[info.img_link]]" class="img-responsive vivino_img">
                                     <span class="list-group-item-text">Region: [[info.region]]</span><br/>
                                     <span class="list-group-item-text">Rating:&nbsp;[[info.rating]]</span>&nbsp;<span>Rating&nbsp;Count:&nbsp;[[info.rating_count]]</span><br/>
-                                    <!--a href="[[info.price_link]]" target="_blank" class="btn btn-warning">Price Info</a-->
                                     </div>
                                 </div>
                             </li>
@@ -54,11 +53,14 @@
                                 <div class="list-group">
                                     <div class="container">
                                         <h4 class="list-group-item-heading">[[info.name]]</h4>
+                                        <div class="list-group-item-text">
+                                            <input type="button" value="[[ctrl.is_info_saved('snooth', info, $event)]]" class="btn btn-danger save" ng-click="ctrl.save('snooth', [[info]], $event)">
+                                            <button type="button" class="btn btn-warning btn-circle" ng-show="info.link !== null" ng-click="ctrl.open_url([[info.link]])"><i class="glyphicon glyphicon-info-sign"></i></button>
+                                        </div>
                                         <span>Vintage:&nbsp;[[info.vintage]]&nbsp;</span>
                                         <span>Price:&nbsp;$[[info.price]]&nbsp;</span><br/>
                                         <span class="list-group-item-text">Region: [[ctrl.replace_empty_str(info.region)]]</span><br/>
                                         <span class="list-group-item-text">Winery: [[info.winery]]</span><br/>
-                                        <a href="[[info.link]]" target="_blank" class="btn btn-warning">Product Info</a>
                                     </div>
                                 </div>
                             </li>
@@ -75,11 +77,13 @@
                                 <div class="list-group">
                                     <div class="container">
                                     <h4 class="list-group-item-heading">[[info.wine_name]]</h4>
+                                    <div class="list-group-item-text">
+                                        <input type="button" value="[[ctrl.is_info_saved('wine_searcher', info, $event)]]" class="btn btn-danger save" ng-click="ctrl.save('wine_searcher', [[info]], $event)">
+                                        <button type="button" class="btn btn-warning btn-circle" ng-show="info.product_link !== null" ng-click="ctrl.open_url([[info.product_link]])"><i class="glyphicon glyphicon-info-sign"></i></button>
+                                    </div>
                                     <span class="list-group-item-text">Price: $[[info.price]]</span><br/>
                                     <span class="list-group-item-text">Seller: [[info.seller_name]]</span><br/>
                                     <span class="list-group-item-text">Seller Location: [[info.seller_location]]</span><br/>
-                                    <a href="[[info.seller_link]]" target="_blank" class="btn btn-warning" ng-show="info.seller_link !== 'NA'">Seller Info</a>
-                                    <a href="[[info.product_link]]" target="_blank" class="btn btn-warning">Product Info</a>
                                     </div>
                                 </div>
                             </li>
