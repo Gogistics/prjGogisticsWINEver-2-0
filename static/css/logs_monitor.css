@@ -1,0 +1,9 @@
+.row{
+    margin: 20px auto;
+}
+.row :nth-child(odd){
+  background-color:#fff;
+}
+.row :nth-child(even){
+  background-color:#ccc;
+}

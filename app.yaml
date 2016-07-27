@@ -32,7 +32,7 @@ handlers:
 - url: /img
   static_dir: static/images
   expiration: "6d 0m"
-
+  
 - url: /my_ng_templates
   static_dir: static/my_ng_templates
   expiration: "2d 0m"

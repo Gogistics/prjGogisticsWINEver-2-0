@@ -27,6 +27,13 @@ class IndexPageRouter(BaseHandler):
         template_values = {}
         template_values.update({"title" : "WINEver"})
         self.render_template("/index.html", template_values)
+        
+class LogsMonitorRouter(BaseHandler):
+    def get(self):
+        """ index page """
+        template_values = {}
+        template_values.update({"title" : "Scalyr"})
+        self.render_template("/logs_monitor.html", template_values)
     
 # configuration
 config = dict_setting.config_setting
@@ -34,7 +41,8 @@ config = dict_setting.config_setting
 # app
 app = webapp2.WSGIApplication([
     webapp2.Route(r'/', FrontPageRouter, name='front_page'),
-    webapp2.Route(r'/base/index', IndexPageRouter, name='index_page')
+    webapp2.Route(r'/base/index', IndexPageRouter, name='index_page'),
+    webapp2.Route(r'/base/logs_monitor', LogsMonitorRouter, name='logs_monitor')
 ], debug=True, config=config)
 
 # log

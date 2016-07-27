@@ -1,0 +1,29 @@
+{% extends "/base.html"%}
+
+<!-- sub-css block -->
+{% block css_content %}
+<link type="text/css" rel="stylesheet" href="/css/logs_monitor.css">
+{% endblock %}
+
+<!-- main content -->
+{% block main_content %}
+<div ng-app="logsMonitorApp" ng-controller="logsMonitorCtrl as ctrl">
+    <div class="container">
+        <h3>Scalyr Logs Monitor</h3>
+        <p>Current Latest [[ctrl.sorted_list.length]] Logs</p>
+        <div class="list-group row">
+            <div class="list-group-item" ng-repeat="log in ctrl.sorted_list track by $index">
+                Server: [[log.server]] ; Datetime: [[log.timestamp | date:'medium']]<br>[[log.line]]
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<!-- sub-js block -->
+{% block js_content %}
+<script type="text/javascript" src="/js/logs_monitor.js"></script>
+<!--[if (gt IE 9)|!(IE)]>
+<!-->
+<!--<![endif]-->
+{% endblock %}
